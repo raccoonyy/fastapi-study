@@ -11,6 +11,12 @@ class ModelName(str, Enum):
     lenet = "lenet"
 
 
+@app.get("/")
+async def root(request: Request):
+    params = request.query_params
+    return params
+
+
 @app.get("/items/{item_id}")
 async def read_item(item_id: int):
     return {"item_id": item_id}
