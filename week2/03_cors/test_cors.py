@@ -3,7 +3,7 @@ from unittest import TestCase
 from fastapi.testclient import TestClient
 from fastapi.middleware.cors import CORSMiddleware
 
-from ..cors import app
+from .cors import app
 
 
 client = TestClient(app)
