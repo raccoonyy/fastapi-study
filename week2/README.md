@@ -133,4 +133,15 @@ poetry run pytest
  - [main3.py 파일](07_metadata/main3.py)
 
 # Static 파일
- - [main.py 파일](https:github.com/raccoonyy/fastapi-study/blob/main/week2/static_files/main.py)
+ - [main.py 파일](08_static_files/main.py)
+
+# 디버깅
+- `if __name__ == "__main__":` 을 하면 해당 파일 실행시 자동으로 if 안의 내용이 실행됨.
+- 하지만 해당 파일을 다른 파일에서 `import`하면 실행되지 않음.
+- `import uvicorn`해서 `uvicorn`을 바로 실행할 수도 있음.
+  ``` python
+	uvicorn.run(app, host="0.0.0.0", port=8000)
+  ```
+- `uvicorn`을 코드로 실행했듯, 여느 파이썬 프로그램이라도 디버거에서 호출할 수 있음
+- VS Code와 파이참에서 디버거로 파일 실행하기 실습
+- [main.py 파일](09_debugging/main.py)
